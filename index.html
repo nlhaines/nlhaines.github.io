@@ -89,14 +89,18 @@
     <section id="portfolio" class="portfolio">
         <h2>Projects</h2>
         <div class="portfolio-item">
-            <img id="pfpackage" src="photos/placeholder.png" alt="Simulated Liquid Net Worth (Inflation Adjusted)">
+            <a href="photos/pfplot1.png" target="_blank">
+                <img id="pfpackage" src="photos/placeholder.png" alt="Simulated Liquid Net Worth (Inflation Adjusted)">
+            </a>
             <div class="portfolio-item-description">
                 <h3>Personal Finance Package for R</h3>
-                <p>A package for simulating personal finance outcomes. Simulations are month-by-month and account for changes in macro-economic factors such as inflation, interest rates, and more. You define your investments, income streams, monthly spending, how much you'd like to invest in the stock market monthly, and how you'd like to allocate your cash between currencies. Users can define targets for key metrics to see how long they will take to reach under different scenarios, or see where those metrics will be at the end of the simulation period.  Development is ongoing and suggestions are welcome.</p>
+                <p>A package for simulating personal finance outcomes. Simulations are month-by-month and account for changes in macro-economic factors such as inflation, interest rates, and more. You define your investments, income streams, monthly spending, how much you'd like to invest in the stock market monthly, and how you'd like to allocate your cash between currencies. Users can define targets for key metrics to see how long they will take to reach under different scenarios, or see where those metrics will be at the end of the simulation period. Development is ongoing and suggestions are welcome.</p>
             </div>
         </div>
         <div class="portfolio-item">
-            <img src="photos/coming-soon.webp" alt="Coming Soon">
+            <a href="photos/coming-soon.webp" target="_blank">
+                <img src="photos/coming-soon.webp" alt="Coming Soon">
+            </a>
             <div class="portfolio-item-description">
                 <h3>Personal Finance Website in Django</h3>
                 <p>The website will empower users to understand what their financial future looks like under current conditions, hypothetical situations, and more. Demo website coming soon.</p>
@@ -107,21 +111,27 @@
     <section id="consulting" class="consulting">
         <h2>Consulting</h2>
         <div class="consulting-item">
-            <img id="random-image" src="photos/placeholder.png" alt="Custom Financial Simulations">
+            <a href="photos/plot1.png" target="_blank">
+                <img id="random-image" src="photos/placeholder.png" alt="Custom Financial Simulations">
+            </a>
             <div class="consulting-item-description">
                 <h3>Financial Simulations and Projections</h3>
                 <p>The world is complex, and everything is interconnected. If you're considering an investment with a lot of moving parts, negotiating a deal, or just trying to plan your financial future, my financial simulations can help. Instead of assuming steady growth rates, and set valuation multiples my simulations can account for correlations in asset values, random events, changes in interest rates, inflation, and black-swan catastrophes, helping you understand what key metrics look like under median, ideal, and worst-case-scenarios.</p>
             </div>
         </div>
         <div class="consulting-item">
-            <img src="photos/str-report" alt="Short Term Rental Reports">
+            <a href="photos/str-report" target="_blank">
+                <img src="photos/str-report" alt="Short Term Rental Reports">
+            </a>
             <div class="consulting-item-description">
                 <h3>Short Term Rental Report</h3>
                 <p>As an experienced Airbnb host and data analyst I'll leverage data from leading providers in short-term rental data to help you project what you can make with a short-term rental acquisition. For years short-term rentals have been a great way to boost your returns on rental properties, but many markets are softening and changes in regulations can quickly change the outlook. Whether you're deciding between a few prospective properties, weighing the idea in general, or attempting to value a property, I can help.</p>
             </div>
         </div>
         <div class="consulting-item">
-            <img src="photos/custom-consulting.webp" alt="General Consulting">
+            <a href="photos/custom-consulting.webp" target="_blank">
+                <img src="photos/custom-consulting.webp" alt="General Consulting">
+            </a>
             <div class="consulting-item-description">
                 <h3>Custom</h3>
                 <p>I enjoy building things, working with diverse teams, wearing different hats, and getting my hands dirty. If you have a project you think I can help you with, please don't hesitate to reach out.</p>
@@ -140,16 +150,25 @@
             'photos/plot3.png',
             'photos/plot4.png'
         ];
-        const randomConsultingImage = consultingImages[Math.floor(Math.random() * consultingImages.length)];
-        document.getElementById('random-image').src = randomConsultingImage;
-
         const pfpackageImages = [
             'photos/pfplot1.png',
             'photos/pfplot2.png',
-            'photos/pfplot3.png',
+            'photos/pfplot3.png'
         ];
-        const randomPfpackageImage = pfpackageImages[Math.floor(Math.random() * pfpackageImages.length)];
-        document.getElementById('pfpackage').src = randomPfpackageImage;
+
+        function setRandomImage(elementId, images) {
+            const randomImage = images[Math.floor(Math.random() * images.length)];
+            document.getElementById(elementId).src = randomImage;
+            document.getElementById(elementId).parentElement.href = randomImage;
+        }
+
+        setRandomImage('random-image', consultingImages);
+        setRandomImage('pfpackage', pfpackageImages);
+
+        setInterval(function() {
+            setRandomImage('random-image', consultingImages);
+            setRandomImage('pfpackage', pfpackageImages);
+        }, 60000); // Change images every 60 seconds
     });
 </script>
 
