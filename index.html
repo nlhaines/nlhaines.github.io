@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Portfolio</title>
+    <title>Meet Noah Libby-Haines</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Average+Sans:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -89,10 +89,10 @@
     <section id="portfolio" class="portfolio">
         <h2>Projects</h2>
         <div class="portfolio-item">
-            <img src="photos/lnw_plot.png" alt="Simulated Liquid Net Worth (Inflation Adjusted)">
+            <img id="pfpackage" src="photos/placeholder.png" alt="Simulated Liquid Net Worth (Inflation Adjusted)">
             <div class="portfolio-item-description">
                 <h3>Personal Finance Package for R</h3>
-                <p>A package for simulating personal finance outcomes. Simulations are month-by-month and account for changes in macro-economic factors such as inflation, interest rates, and more. You define your investments, income streams, monthly spending, how much you'd like to invest in the stock market monthly, and how you'd like to allocate your cash between currencies. Users can define targets for key metrics to see how long they will take to reach under different scenarios, or see where those metrics will be at the end of the simulation period.</p>
+                <p>A package for simulating personal finance outcomes. Simulations are month-by-month and account for changes in macro-economic factors such as inflation, interest rates, and more. You define your investments, income streams, monthly spending, how much you'd like to invest in the stock market monthly, and how you'd like to allocate your cash between currencies. Users can define targets for key metrics to see how long they will take to reach under different scenarios, or see where those metrics will be at the end of the simulation period.  Development is ongoing and suggestions are welcome.</p>
             </div>
         </div>
         <div class="portfolio-item">
@@ -134,14 +134,22 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        const images = [
+        const consultingImages = [
             'photos/plot1.png',
             'photos/plot2.png',
             'photos/plot3.png',
             'photos/plot4.png'
         ];
-        const randomImage = images[Math.floor(Math.random() * images.length)];
-        document.getElementById('random-image').src = randomImage;
+        const randomConsultingImage = consultingImages[Math.floor(Math.random() * consultingImages.length)];
+        document.getElementById('random-image').src = randomConsultingImage;
+
+        const pfpackageImages = [
+            'photos/pfplot1.png',
+            'photos/pfplot2.png',
+            'photos/pfplot3.png',
+        ];
+        const randomPfpackageImage = pfpackageImages[Math.floor(Math.random() * pfpackageImages.length)];
+        document.getElementById('pfpackage').src = randomPfpackageImage;
     });
 </script>
 
