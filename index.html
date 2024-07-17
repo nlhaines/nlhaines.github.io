@@ -8,32 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <style>
-        body {
-            font-family: 'Average Sans', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background: #000000;
-            color: white;
-            padding: 15px 0;
-            text-align: center;
-        }
-        header nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-        .container {
-            width: 80%;
-            margin: 20px auto;
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
         .bio {
             display: flex;
             align-items: center;
@@ -68,17 +42,7 @@
 </head>
 <body>
 
-<header>
-    <h1>Noah Libby-Haines</h1>
-    <nav>
-        <a href="#"><i class="fas fa-home"></i></a>
-        <a href="https://github.com/nlhaines/"><i class="fab fa-github"></i></a>
-        <a href="resume.html">Resume</a>
-        <a href="#portfolio">Projects</a>
-        <a href="#consulting">Consulting</a>
-        <!--<a href="aboutme.html">About Me</a>-->
-    </nav>
-</header>
+<div id="header"></div>
 
 <div class="container">
     <section class="bio">
@@ -120,6 +84,18 @@
             </div>
         </div>
         <div class="consulting-item">
+            <a href="photos/bvplot1.png" target="_blank">
+                <img id="bvpackage" src="photos/placeholder.png" alt="Streamlined Business Valuations">
+            </a>
+            <div class="consulting-item-description">
+                <h3>Streamlined Business Valuations</h3>
+                <p>At Sax Capital Partners, I worked extensively with numerous small businesses, guiding them through the process of selling their enterprises. I understand the unique challenges small business owners face, and their need for straightforward, jargon-free communication and efficient use of time.</p>
+                <p>To address these needs, I developed a streamlined valuation report specifically designed for small business owners. This report provides clear and concise insights into the value of their business, along with key insights into what can be done to enhance that value.</p>
+                <p>These streamlined business valuations start at just $500, making it a cost-effective alternative to traditional valuation methods that typically cost $3000 or more. Whether you plan to sell soon or not, as a small business owner knowledge of your business's value is key to making informed decisions and optimizing your financial future.</p>
+            </div>
+        </div>
+        
+        <div class="consulting-item">
             <a href="photos/str-report" target="_blank">
                 <img src="photos/str-report" alt="Short Term Rental Reports">
             </a>
@@ -133,7 +109,7 @@
                 <img src="photos/custom-consulting.webp" alt="General Consulting">
             </a>
             <div class="consulting-item-description">
-                <h3>Custom</h3>
+                <h3>Anything Else...</h3>
                 <p>I enjoy building things, working with diverse teams, wearing different hats, and getting my hands dirty. If you have a project you think I can help you with, please don't hesitate to reach out.</p>
                 <p>Sliding scale rates are available for cash-strapped startups, passionate people, and people looking to change the world for the better.</p>
             </div>
@@ -155,6 +131,14 @@
             'photos/pfplot2.png',
             'photos/pfplot3.png'
         ];
+        const bvpackageImages = [
+            'photos/bvplot1.png',
+            'photos/bvplot2.png',
+            'photos/bvplot3.png',
+            'photos/bvplot4.png',
+            'photos/bvplot5.png'
+
+        ];
 
         function setRandomImage(elementId, images) {
             const randomImage = images[Math.floor(Math.random() * images.length)];
@@ -164,11 +148,23 @@
 
         setRandomImage('random-image', consultingImages);
         setRandomImage('pfpackage', pfpackageImages);
+        setRandomImage('bvpackage', bvpackageImages);
+
 
         setInterval(function() {
             setRandomImage('random-image', consultingImages);
             setRandomImage('pfpackage', pfpackageImages);
         }, 60000); // Change images every 60 seconds
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
     });
 </script>
 

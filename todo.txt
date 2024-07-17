@@ -1,0 +1,2 @@
+1.   Add About Me page with About Me and Full Bio Sections
+2.   Add section for Business Valuations (#2 item in consulting)
