@@ -1,2 +1,3 @@
-1.   Add About Me page with About Me and Full Bio Sections
-2.   Add section for Business Valuations (#2 item in consulting)
+1.   Move to noahlibbyhaines.com
+2.   Add About Me page with About Me and Full Bio Sections
+2.   Add Lead Capture Form

@@ -52,7 +52,7 @@
 
     <section id="portfolio" class="portfolio">
         <h2>Projects</h2>
-        <div class="portfolio-item">
+        <!-- <div class="portfolio-item">
             <a href="photos/pfplot1.png" target="_blank">
                 <img id="pfpackage" src="photos/placeholder.png" alt="Simulated Liquid Net Worth (Inflation Adjusted)">
             </a>
@@ -60,14 +60,14 @@
                 <h3>Personal Finance Package for R</h3>
                 <p>A package for simulating personal finance outcomes. Simulations are month-by-month and account for changes in macro-economic factors such as inflation, interest rates, and more. You define your investments, income streams, monthly spending, how much you'd like to invest in the stock market monthly, and how you'd like to allocate your cash between currencies. Users can define targets for key metrics to see how long they will take to reach under different scenarios, or see where those metrics will be at the end of the simulation period. Development is ongoing and suggestions are welcome.</p>
             </div>
-        </div>
+        </div> -->
         <div class="portfolio-item">
-            <a href="photos/coming-soon.webp" target="_blank">
-                <img src="photos/coming-soon.webp" alt="Coming Soon">
+            <a href="https://demo.wealthwatchers.app" target="_blank">
+                <img src="photos/ww-logo.webp" alt="Wealth Watchers">
             </a>
             <div class="portfolio-item-description">
-                <h3>Personal Finance Website in Django</h3>
-                <p>The website will empower users to understand what their financial future looks like under current conditions, hypothetical situations, and more. Demo website coming soon.</p>
+                <h3>Wealth Watchers</h3>
+                <p>The full website will feature a suite of tools to empower users to understand what their financial future looks like under current conditions, hypothetical situations, and more.  To whet your appetite, a demo of our powerful personal financial simulator is up on our demo site. Check it out now!</p>
             </div>
         </div>
     </section>
@@ -96,7 +96,7 @@
         </div>
         
         <div class="consulting-item">
-            <a href="photos/str-report" target="_blank">
+            <a href="photos/str-report.webp" target="_blank">
                 <img src="photos/str-report" alt="Short Term Rental Reports">
             </a>
             <div class="consulting-item-description">
@@ -126,11 +126,11 @@
             'photos/plot3.png',
             'photos/plot4.png'
         ];
-        const pfpackageImages = [
+        /*const pfpackageImages = [
             'photos/pfplot1.png',
             'photos/pfplot2.png',
             'photos/pfplot3.png'
-        ];
+        ];*/
         const bvpackageImages = [
             'photos/bvplot1.png',
             'photos/bvplot2.png',
@@ -147,13 +147,14 @@
         }
 
         setRandomImage('random-image', consultingImages);
-        setRandomImage('pfpackage', pfpackageImages);
+        //setRandomImage('pfpackage', pfpackageImages);
         setRandomImage('bvpackage', bvpackageImages);
 
 
         setInterval(function() {
             setRandomImage('random-image', consultingImages);
-            setRandomImage('pfpackage', pfpackageImages);
+            //setRandomImage('pfpackage', pfpackageImages);
+            setRandomImage('bvpackage', bvpackageImages);
         }, 60000); // Change images every 60 seconds
     });
 </script>
