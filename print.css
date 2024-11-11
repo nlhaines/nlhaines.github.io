@@ -1,0 +1,19 @@
+/* Remove unnecessary background and adjust layout for printing */
+@media print {
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.4; /* Maintain good readability */
+        background-color: #ffffff !important; /* Remove background color */
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        width: 95% !important; /* Use a wider width for printing */
+        max-width: 800px; /* Limit max width for better print layout */
+        margin: 20px auto; /* Center with some margin */
+        box-shadow: none !important; /* Remove box shadow */
+        font-size: 0.85em; /* Slightly reduce text size */
+    }
+}
+
